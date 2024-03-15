@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auro's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2c313ee4fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="https://images.squarespace-cdn.com/content/v1/5f61e8e9ade16e25ac3540fe/1600689266809-Z379OTTXM6GAXLQ6VTC4/portfolio.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header">
+                <div class="header-image">
+                    <img src="MyPic.jpg" alt="">
+                </div>
+                <div class="header-text">
+                    Hi, I'm <span class="name">Auro Sampad</span>
+                    <div>And I'm a passionate</div>
+                    <!-- Element to contain animated typing -->
+                    <span id="element"></span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Web Designer'],
+            typeSpeed: 50,
+        });
+    </script>
+
+    <!--------------About-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="MyPic.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I value sincerity in whatever I do, and honesty is the crux of my personality. Completed a
+                        Bachelor's degree in Computer Science and eager to learn new technologies. Possesses excellent
+                        problem-solving abilities and enjoys working in a team environment.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Language</span><br>Java</li>
+                            <li><span>Framework</span><br>Spring Boot</li>
+                            <li><span>Database Management</span><br>SQL, MySQL, Oracle</li>
+                            <li><span>Web Technologies</span><br>HTML, CSS, JavaScript, PHP</li>
+                            <li><span>Version Control</span><br>Git, GitHub</li>
+                            <li><span>Development Tools</span><br>Eclipse, VS Code</li>
+                            <li><span>Problem-Solving and Analytical Skills</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>I'm Fresher</span><br>No Work Experience</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>High School (2018)</span><br>Sri Aurobindo Integral Education Centre, Matrubihar,
+                                Kalupadaghat, Khordha, Odisha<br>Percentage: 57.83%</li>
+                            <li><span>Secondary School (2018-20)</span><br>Rajdhani H.S. School of Sc., Arts and Comm.,
+                                Bhubaneswar, Odisha<br>Percentage: 57.5%</li>
+                            <li><span>Graduation Degree (2020-23)</span><br>Nayagarh Autonomous College, Nayagarh,
+                                Odisha<br>B.Sc. in Computer Science (Hons.)<br>Percentage: 75%, SGPA: 7.99</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------Services------------------------ -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt vel nihil nulla quo velit debitis
+                        aliquid delectus fugit aliquam labore inventore ut numquam iusto, enim, explicabo laboriosam
+                        excepturi voluptatum sint?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt vel nihil nulla quo velit debitis
+                        aliquid delectus fugit aliquam labore inventore ut numquam iusto, enim, explicabo laboriosam
+                        excepturi voluptatum sint?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt vel nihil nulla quo velit debitis
+                        aliquid delectus fugit aliquam labore inventore ut numquam iusto, enim, explicabo laboriosam
+                        excepturi voluptatum sint?</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------Portfolio------------------------ -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="https://static.vecteezy.com/system/resources/previews/011/153/360/original/3d-web-developer-working-on-project-illustration-png.png"
+                        alt="">
+                    <div class="layer">
+                        <h3>Sosila Media App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from Play Store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://static.vecteezy.com/system/resources/previews/011/153/367/original/3d-web-development-illustration-png.png"
+                        alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from Play Store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://static.vecteezy.com/system/resources/previews/011/153/363/original/3d-web-developer-working-on-project-illustration-png.png"
+                        alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from Play Store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ---------------------Contact----------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> aurosampadchampatiray573@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 8260341299</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/auro.sampad.1?mibextid=JRoKGi"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/auro_sampad_71?igsh=dnZncXNhZWY4MnNw"><i
+                                class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="MyResume.pdf" class="btn btn2">My Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &#169; aurosportfolio.com | All rights reserved</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- --------Input web app URL---------- -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-FfrMVt-xZ225P8OyvvYGxVKmJA5CeR8hTsdh7ZK7hGn3wmxs4zcrHzYUP0lcuhZ1cQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully."
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
